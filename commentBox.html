@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="build/weui.css">
+    <script src="build/react-0.14.3.js"></script>
+    <script src="build/react-dom-0.14.3.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+
+
+<div id="content">
+</div>
+<script type="text/babel">
+   var CommentBox = React.createClass({
+        render: function(){
+            return (
+                <article className = "commentBox">
+                    <h1>Hello,I am a commentBox!</h1>
+                    <CommentList />
+                    <CommentForm />            
+                </article>
+            );
+
+        }
+    });
+    var CommentList = React.createClass({
+        render: function(){
+            return (
+                <div className = "commentList">
+                    <div>Hello,I am a commentList!</div>
+                </div>
+            );
+
+        }
+    });
+    var CommentForm = React.createClass({
+        render: function(){
+            return (
+                <div className = "commentForm">
+                    <div>Hello,I am a commentForm!</div>
+                </div>
+            );
+
+        }
+    });
+    ReactDOM.render(
+        <CommentBox />,
+        document.getElementById('content')
+    )
+</script>
+
+</body>
+</html>
